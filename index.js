@@ -13,6 +13,9 @@ app.get("/wishlist", (req, res) => {
 });
 
 
+app.use(express.static("public"));
+
+
 
 
 app.listen(port, () => {
