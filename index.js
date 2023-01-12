@@ -4,9 +4,9 @@ const port = 3000;
 const port2 = 8000;
 
 
-app.get("/", (req, res) => { 
+/* app.get("/", (req, res) => { 
     res.send("Welcoome!")
-});
+}); */
 
 app.get("/wishlist", (req, res) => { 
     res.send("My wishlist!")
@@ -15,6 +15,10 @@ app.get("/wishlist", (req, res) => {
 
 app.use(express.static("public"));
 
+
+const userRouter = require("./routes/userRoutes")
+
+app.use("/users", userRouter)
 
 
 
