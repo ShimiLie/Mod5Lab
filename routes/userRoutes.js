@@ -4,16 +4,19 @@ const router = express.Router();
 
 
 
-app.get("/", (req,res) => {
+router.get("/", (req, res) => {
     res.send("All Users")
 });
 
-app.get("/new", (req,res) => {
+router.get("/new", (req, res) => {
     res.send("Add User")
 });
 
-app.post("/", (req,res) => {
+router.post("/", (req, res) => {
     res.send("Create User")
 });
+
+
+ // router.get("/:id")
 
 module.exports = router
